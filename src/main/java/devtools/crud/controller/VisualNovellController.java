@@ -21,14 +21,10 @@ public class VisualNovellController {
         this.novellLineService = novellLineService;
     }
 
-    @GetMapping("/start")
-    public void start() {
-        csvHandler.handle();
-    }
-
     @PostMapping("/load")
     public void loadNovell(@RequestParam("novell") MultipartFile novell) {
         storageService.save(novell);
+        csvHandler.handle();
     }
 
     @GetMapping("/get/{id}")
