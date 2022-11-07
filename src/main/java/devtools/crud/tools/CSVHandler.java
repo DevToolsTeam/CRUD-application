@@ -17,6 +17,9 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * Responsible to parse csv
+ */
 @Component
 public class CSVHandler {
     NovellLineService novellLineService;
@@ -25,6 +28,10 @@ public class CSVHandler {
     public CSVHandler(NovellLineService novellLineService) {
         this.novellLineService = novellLineService;
     }
+
+    /**
+     * put csv file to database
+     */
     public void handle() {
         try (CSVReader reader = new CSVReader(new FileReader("src/main/resources/novell.csv"))) {
             List<String[]> r = reader.readAll();

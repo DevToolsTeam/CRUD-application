@@ -8,8 +8,15 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+/**
+ * Save csv file to tmp storage
+ */
 @Service
 public class StorageService {
+    /**
+     *
+     * @param novell csv to save
+     */
     public void save(MultipartFile novell) {
         File tmp = new File("src/main/resources/static");
         InputStream initialStream = null;

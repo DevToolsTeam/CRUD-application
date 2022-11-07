@@ -1,0 +1,6 @@
+devtools.crud
+devtools.crud.controller
+devtools.crud.model
+devtools.crud.repository
+devtools.crud.service
+devtools.crud.tools
